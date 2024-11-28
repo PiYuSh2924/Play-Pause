@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+  background-color: black;
+  color-scheme: dark;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.song-info-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.song-info {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.overflow .song-info {
+  padding-right: 100%;
+  animation: marquee 10s linear infinite;
+}
+
+.overflow .song-info:hover {
+  animation-play-state: paused;
+}
